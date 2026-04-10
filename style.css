@@ -1,0 +1,104 @@
+:root {
+    --bg: #0d0d0d;
+    --text: #e0e0e0;
+    --accent: #f2994a;
+    --muted: #666;
+    --card-bg: #161616;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Navigasi Lebih Kompak */
+nav {
+    padding: 15px 5%;
+    position: fixed; width: 100%; top: 0; z-index: 100;
+    background: rgba(13, 13, 13, 0.9);
+    border-bottom: 1px solid #222;
+}
+
+.nav-content { display: flex; justify-content: space-between; align-items: center; }
+
+.logo { 
+    font-family: 'Syne'; 
+    font-size: 0.9rem; /* Ukuran Logo Mengecil */
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+.logo span { color: var(--accent); opacity: 0.8; }
+
+.nav-links a { color: var(--muted); text-decoration: none; font-size: 0.7rem; font-weight: bold; }
+
+/* Hero Section (Ukuran Teks Lebih Manusiawi di Mobile) */
+.hero {
+    padding: 120px 7% 60px;
+    text-align: left;
+}
+
+.hero-tag { font-size: 0.7rem; color: var(--accent); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 10px; }
+
+.hero-title {
+    font-family: 'Syne';
+    font-size: clamp(1.8rem, 5vw, 3rem); /* Mengecil secara signifikan */
+    line-height: 1.1;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.hero-desc { color: var(--muted); font-size: 0.9rem; max-width: 400px; margin-bottom: 25px; }
+
+.hero-badges { display: flex; gap: 10px; flex-wrap: wrap; }
+.badge { font-size: 0.6rem; border: 1px solid #333; padding: 5px 12px; border-radius: 4px; color: #aaa; }
+
+/* Structure Layout */
+.structure-section { padding: 40px 7%; }
+
+.kehormatan-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 60px; }
+.k-card { background: var(--card-bg); padding: 25px; border-radius: 12px; }
+.k-card h5 { font-size: 0.8rem; color: var(--accent); margin-bottom: 10px; text-transform: uppercase; }
+.k-card p { font-size: 0.8rem; color: var(--muted); }
+
+.member-group { margin-bottom: 50px; }
+.group-label { font-size: 0.7rem; color: var(--muted); margin-bottom: 20px; border-left: 2px solid var(--accent); padding-left: 10px; }
+
+.pratama-card {
+    background: linear-gradient(to right, #1a1a1a, #111);
+    padding: 30px; border-radius: 15px; border: 1px solid #222;
+    margin-bottom: 15px;
+}
+.rank { font-size: 0.6rem; text-transform: uppercase; color: var(--accent); letter-spacing: 2px; }
+.pratama-card h4 { font-family: 'Syne'; font-size: 1.5rem; margin: 5px 0; }
+.vote-info { font-size: 0.7rem; color: var(--muted); }
+
+.grid-details { display: grid; grid-template-columns: 1fr; gap: 15px; }
+.detail-box { background: var(--card-bg); padding: 20px; border-radius: 10px; }
+.detail-box h6 { font-size: 0.75rem; color: var(--accent); margin-bottom: 8px; }
+.detail-box p { font-size: 0.8rem; color: #bbb; }
+
+.pills span { 
+    display: block; font-size: 0.75rem; color: var(--muted); 
+    padding: 8px 0; border-top: 1px solid #222; 
+}
+
+/* Footer */
+footer { padding: 40px; text-align: center; font-size: 0.65rem; color: #444; border-top: 1px solid #111; }
+
+/* Mobile Adjustment */
+@media (max-width: 600px) {
+    .kehormatan-grid { grid-template-columns: 1fr; }
+    .hero { padding-top: 100px; }
+}
+
+/* Curtain */
+.curtain {
+    position: fixed; inset: 0; background: var(--accent);
+    z-index: 1000; display: flex; justify-content: center; align-items: center;
+}
+.curtain-text { font-size: 0.8rem; font-weight: bold; letter-spacing: 4px; color: #000; }
